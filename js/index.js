@@ -90,7 +90,7 @@ window.addEventListener('load', function(){
 
   			pipeline = p;
 
-  			pipeline.create("PlayerEndpoint", {uri: address.value}, function(error, player){
+  			pipeline.create("PlayerEndpoint", {networkCache: 0, uri: address.value}, function(error, player){
   			  if(error) return onError(error);
 
   			  pipeline.create("WebRtcEndpoint", function(error, webRtcEndpoint){
